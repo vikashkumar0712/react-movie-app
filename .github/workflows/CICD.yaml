@@ -28,7 +28,7 @@ jobs:
 
     - name: getting .env file from s3 bucket
       run: |
-        git_env=$(aws s3 cp s3://arifact-bucket2001/.env -)"
+        git_env=$(aws s3 cp s3://arifact-bucket2001/.env -)
     - name: Install Node.js and npm
       uses: actions/setup-node@v2
       with:
