@@ -2,6 +2,6 @@ version: "3.9"
 
 services:
   myservice:
-    image: manualname
+    image: "manualname"
     ports:
       - "3000:3000"
