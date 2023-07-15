@@ -22,7 +22,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                npm run install
+                sh 'npm run install'
             }
         }
     }
