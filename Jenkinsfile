@@ -4,20 +4,23 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "building the application..."
+                sh 'npm install' // Install dependencies
+                sh 'npm run build' // Build the React application
             }
         }
         
         stage('Test') {
+            when {
+                branch 'dev'
+            }
             steps {
-                echo "testing the application...."
+                sh 'npm test' // Run tests
             }
         }
         
         stage('Deploy') {
-            
             steps {
-                echo "Deploying the application...."
+                npm run install
             }
         }
     }
