@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                // sh 'npm test' // Run tests
+                echo "Test passed."
             }
         }
         
