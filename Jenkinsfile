@@ -2,24 +2,26 @@ pipeline {
     agent any
     
     stages {
-        stage('Build') {
+        stage('Greeting') {
             steps {
-                sh 'npm install -f' // Install dependencies
-                sh 'npm run build' // Build the React application
+                helloWorld()
+                // sh 'npm install -f' // Install dependencies
+                // sh 'npm run build' // Build the React application
             }
         }
         
         stage('Test') {
             steps {
+                testStage()
                // sh 'npm test' // Run tests
-                echo "Test passed."
+               //  echo "Test passed."
             }
         }
         
-        stage('Deploy') {
-            steps {
-                sh 'npm start'
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         sh 'npm start'
+        //     }
+        // }
     }
 }
